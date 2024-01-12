@@ -1,0 +1,34 @@
+.thick-text {
+    font-size: 1.5em;
+    color: black;
+}
+
+.text-weight {
+    font-weight: 700;
+}
+
+.small-text {
+    font-size: 0.7em;
+    color: black;
+}
+
+.mini-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    font-size: 0.8rem;
+}
+
+.card-across-cart {
+    width: 100%;
+    box-shadow: 0 0 7px #c0bdbd;
+    margin-bottom: 0.5rem;
+
+}
+
+.card-remove-cart {
+    width: 95%;
+    margin-bottom: 0.5rem;
+    margin-left: 0.7rem;
+
+}

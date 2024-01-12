@@ -21,6 +21,9 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import ServicePage from './pages/Services';
+import CartPage from './pages/Cart';
+import TrackPage from './pages/Track';
 
 setupIonicReact();
 
@@ -33,6 +36,15 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/">
           <Redirect to="/home" />
+        </Route>
+        <Route exact path="/services">
+          <ServicePage />
+        </Route>
+        <Route exact path="/cart">
+          <CartPage />
+        </Route>
+        <Route exact path="/track">
+          <TrackPage />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

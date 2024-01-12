@@ -1,0 +1,32 @@
+.ion-border {
+    border-radius: 27px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 22px;
+    border: 1px solid black;
+    width: 40%;
+    align-content: center;
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+.ion-btn-wt {
+    width: 20px;
+}
+
+.ion-text-thick {
+    font-weight: 700;
+}
+.ion-clear {
+    display: flex;
+    height: 28px;
+    justify-content: space-between;
+}
+.ion-button-smaller{
+    min-height: 0.1em;
+    --border-radius: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-start: 0em;
+    --padding-end: 0em;
+    width: 25px;
+}

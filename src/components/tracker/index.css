@@ -1,0 +1,20 @@
+.tracker {
+    width: 3.3px;
+    border-radius: 3px;
+    margin: auto;
+    position: relative;
+}
+
+.ticks {
+    height: 30px;
+    width: 35px;
+    border-radius: 999px;
+    position: absolute;
+    left: -15px;
+    background: #EDEDED;
+    z-index: 2;
+}
+
+.common-color {
+    background: #006A55;
+}
