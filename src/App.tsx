@@ -27,6 +27,10 @@ import FirstPage from './pages/FirstPage';
 import LoginPhone from './pages/LoginPhone';
 import PhoneAuth from './pages/PhonAuth';
 import Payment from './pages/Payment';
+import HomePage from './pages/HomePage';
+import ServicePage from './pages/Services';
+import CartPage from './pages/Cart';
+import TrackPage from './pages/Track';
 
 setupIonicReact();
 
@@ -49,11 +53,23 @@ const App: React.FC = () => (
         <Route exact path="/Signup">
           <Signup />
         </Route>
+        <Route exact path="/homePage">
+          <HomePage />
+        </Route>
         <Route exact path="/PhoneAuth">
           <PhoneAuth />
         </Route>
         <Route exact path="/Payment">
           <Payment />
+        </Route>
+        <Route exact path="/services">
+          <ServicePage />
+        </Route>
+        <Route exact path="/cart">
+          <CartPage />
+        </Route>
+        <Route exact path="/track">
+          <TrackPage />
         </Route>
         <Route exact path="/">
           <Redirect to="/home" />

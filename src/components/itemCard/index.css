@@ -1,0 +1,15 @@
+.item-card {
+    height: 14rem;
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.text-weight {
+    font-weight: 700;
+}
+
+.space-around {
+    justify-content: space-around;
+}

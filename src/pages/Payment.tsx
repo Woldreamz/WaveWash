@@ -1,11 +1,14 @@
-import { IonPage, IonContent, IonHeader, IonToolbar, IonButtons, IonBackButton, IonButton, IonTitle, } from '@ionic/react';
+import { IonPage, IonContent, IonHeader, IonToolbar, IonButtons, IonBackButton, IonButton, IonTitle, IonModal, IonItem, IonInput } from '@ionic/react';
 import './Home.css';
 import Paragraph from '../components/Paragraph';
 import Button from '../components/Button';
-import Input from '../components/Input';
+import CardPaymentModal from '../components/modals/payment_card';
+import BankTransferModal from '../components/modals/payment_transfer';
+import React, { useState, useRef } from 'react';
 
 
 const Payment: React.FC = () => {
+ 
   return (
     <IonPage>
 
@@ -22,11 +25,14 @@ const Payment: React.FC = () => {
         <Paragraph headertext='Select Your Payment Method' 
         text='Your selected payment method will be choosen to pay the bill.'/>
         <>
-         <IonButton size="small" className='paymentBtn1' shape="round">Debit Card</IonButton>
-         <IonButton size="small" className='paymentBtn2' shape="round" fill='outline'>Bank Transfer</IonButton>
+         <IonButton id="open-modal" size="small" className='paymentBtn1' shape="round">Debit Card</IonButton>
+         <IonButton id='transfer-modal' size="small" className='paymentBtn2' shape="round" fill='outline'>Bank Transfer</IonButton>    
        </>
+       <CardPaymentModal />
+       <BankTransferModal />    
 
         <Button buttonName='Pay Now' />
+
       </IonContent>
 
     </IonPage>

@@ -1,0 +1,80 @@
+.hidden-cards {
+    display: flex;
+}
+
+.slots {
+    height: 90px;
+}
+
+.slot4 {
+    z-index: -1;
+}
+
+.slot3 {
+    z-index: 1;
+    margin-left: -4rem;
+}
+
+.slot2 {
+    z-index: 2;
+    margin-left: -4rem;
+}
+
+.slot1 {
+    z-index: 3;
+    margin-left: -4rem;
+}
+
+.card-across {
+    display: flex;
+    width: 100%;
+    box-shadow: 0 4px 7px #EDEDED;
+    padding: 9%;
+    gap: 3%;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.heavy-text {
+    font-weight: 700;
+}
+
+p {
+    margin: 0;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.status-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 340px;
+    align-self: center;
+    width: 100%;
+}
+
+.status-wrapper > ion-item{
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    --padding-start: 0;
+    --inner-padding-end: 0;
+}
+
+.status-wrapper > ion-item > ion-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.padding-bottom {
+    padding-bottom: 1rem;
+}
