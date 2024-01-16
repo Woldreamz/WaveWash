@@ -21,6 +21,13 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import LoginPage from './pages/LoginPage';
+import Signup from './pages/Signup';
+import FirstPage from './pages/FirstPage';
+import LoginPhone from './pages/LoginPhone';
+import PhoneAuth from './pages/PhonAuth';
+import Payment from './pages/Payment';
+import HomePage from './pages/HomePage';
 import ServicePage from './pages/Services';
 import CartPage from './pages/Cart';
 import TrackPage from './pages/Track';
@@ -34,8 +41,26 @@ const App: React.FC = () => (
         <Route exact path="/home">
           <Home />
         </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
+        <Route exact path="/FirstPage">
+          <FirstPage />
+        </Route>
+        <Route exact path="/LoginPage">
+          <LoginPage />
+        </Route>
+        <Route exact path="/LoginPhone">
+          <LoginPhone />
+        </Route>
+        <Route exact path="/Signup">
+          <Signup />
+        </Route>
+        <Route exact path="/homePage">
+          <HomePage />
+        </Route>
+        <Route exact path="/PhoneAuth">
+          <PhoneAuth />
+        </Route>
+        <Route exact path="/Payment">
+          <Payment />
         </Route>
         <Route exact path="/services">
           <ServicePage />
@@ -45,6 +70,9 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/track">
           <TrackPage />
+        </Route>
+        <Route exact path="/">
+          <Redirect to="/home" />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
