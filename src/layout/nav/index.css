@@ -1,0 +1,11 @@
+.nav-blank {
+    --border: none;
+    --border-width: none;
+    --background: transparent;
+    --padding-start: 27px;
+    --padding-end: 35px;
+}
+
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0 0 0;
+}
