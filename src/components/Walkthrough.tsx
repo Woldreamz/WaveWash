@@ -12,7 +12,7 @@ const Walkthrough: React.FC<ContainerProps> = () => {
       <h1 style={{width: "100%", textAlign: 'center', color: '#090A0A', fontSize: 24, fontFamily: 'Inter', fontWeight: '700', padding: "20px"}}
       >We are here for you!</h1>
 
-      <IonButton className=".ion-margin-vertical" size="large" shape="round" routerLink="/Signup">Create Account</IonButton>
+      <IonButton className="Btn" size="large" shape="round" routerLink="/Signup">Create Account</IonButton>
 
       <div>
         <span 

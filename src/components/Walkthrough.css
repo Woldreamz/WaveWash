@@ -14,9 +14,9 @@
 }
 
 
-ion-button {
-    --background: #17671b;
-    --background-hover: #68b48e;
+ion-button.Btn {
+    --background: #006A55;
+    --background-hover: #68A397;
     --background-activated: #44a474;
     --background-focused: #88f4be;
 
