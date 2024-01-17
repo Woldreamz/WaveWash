@@ -25,7 +25,7 @@ const Payment: React.FC = () => {
         <Paragraph headertext='Select Your Payment Method' 
         text='Your selected payment method will be choosen to pay the bill.'/>
         <>
-         <IonButton id="open-modal" size="small" className='Btn' shape="round">Debit Card</IonButton>
+         <IonButton id="open-modal" size="small" shape="round">Debit Card</IonButton>
          <IonButton id='transfer-modal' size="small" className='paymentBtn2' shape="round" fill='outline'>Bank Transfer</IonButton>    
        </>
        <CardPaymentModal />
