@@ -1,11 +1,11 @@
-import shirt from '../assets/shirts_grp.svg'
-import pant from '../assets/pants_grp.svg'
-import bedding from '../assets/beddings_grp.svg'
-import shoe from '../assets/shoes_grp.svg'
-import shirt_w from '../assets/shirts_grp2.svg'
-import pant_w from '../assets/pants_grp2.svg'
-import bedding_w from '../assets/beddings_grp2.svg'
-import shoe_w from '../assets/shoes_grp2.svg'
+import shirt from '../assets/image/shirts_grp.svg'
+import pant from '../assets/image/pants_grp.svg'
+import bedding from '../assets/image/beddings_grp.svg'
+import shoe from '../assets/image/shoes_grp.svg'
+import shirt_w from '../assets/image/shirts_grp2.svg'
+import pant_w from '../assets/image/pants_grp2.svg'
+import bedding_w from '../assets/image/beddings_grp2.svg'
+import shoe_w from '../assets/image/shoes_grp2.svg'
 
 const services = [
     {

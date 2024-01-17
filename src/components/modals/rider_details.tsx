@@ -1,9 +1,9 @@
 import { IonAvatar, IonButton, IonCol, IonContent, IonHeader, IonIcon, IonImg, IonModal, IonRow, IonText, IonTitle } from '@ionic/react';
 import React, {useRef, useState} from 'react';
-import dummy from '../../assets/dummy.svg'
-import call from '../../assets/call.svg'
-import message from '../../assets/message.svg'
-import cancel from '../../assets/cancel.svg'
+import dummy from '../../assets/image/dummy.svg'
+import call from '../../assets/icon/call.svg'
+import message from '../../assets/icon/message.svg'
+import cancel from '../../assets/icon/cancel.svg'
 import Rating from '../rating';
 
 

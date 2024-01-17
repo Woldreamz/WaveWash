@@ -2,10 +2,10 @@ import { IonCard, IonCol, IonContent, IonHeader, IonIcon, IonImg, IonItem, IonLa
 import React from 'react';
 import './index.css'
 import Tracker from '../tracker';
-import shipping from '../../assets/shipping.svg'
-import cube from '../../assets/cube.svg'
-import ongoing from '../../assets/ongoing.svg'
-import gift from '../../assets/gift.svg'
+import shipping from '../../assets/icon/shipping.svg'
+import cube from '../../assets/icon/cube.svg'
+import ongoing from '../../assets/icon/ongoing.svg'
+import gift from '../../assets/icon/gift.svg'
 
 interface OrderDetails {
     orderNumber: number

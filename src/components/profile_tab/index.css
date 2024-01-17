@@ -1,0 +1,6 @@
+.tab-across {
+    width: 100%;
+    justify-content: space-between;
+    padding: 4%;
+    border-bottom: 0.1px solid #C4C4C4;
+}

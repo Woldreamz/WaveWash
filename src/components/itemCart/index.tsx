@@ -1,7 +1,7 @@
 import { IonButton, IonCol, IonGrid, IonIcon, IonRow, IonText } from '@ionic/react'
 import React from 'react'
 import FillCounter from '../counter/fill'
-import trash from '../../assets/trash.svg'
+import trash from '../../assets/icon/trash.svg'
 import RemoveModal from '../modals/remove_from';
 import './index.css'
 

@@ -1,7 +1,7 @@
 import { IonAvatar, IonBackButton, IonButton, IonButtons, IonHeader, IonIcon, IonText, IonTitle, IonToolbar } from '@ionic/react'
 import React from 'react'
-import back from '../../assets/arrow-left.svg'
-import filter from '../../assets/filter.svg'
+import back from '../../assets/icon/arrow-left.svg'
+import filter from '../../assets/icon/filter.svg'
 import './index.css'
 
 interface UserProps {

@@ -1,7 +1,7 @@
 import { IonAvatar, IonHeader, IonIcon, IonTitle, IonToolbar } from '@ionic/react'
 import React from 'react'
-import cart from '../../assets/cart.svg'
-import bell from '../../assets/bell.svg'
+import cart from '../../assets/icon/cart.svg'
+import bell from '../../assets/icon/bell.svg'
 import './index.css'
 
 interface UserProps {

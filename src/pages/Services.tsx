@@ -1,7 +1,7 @@
 import { IonButton, IonContent, IonPage, IonRow } from '@ionic/react';
 import React from 'react';
 import ServiceNav from '../layout/nav/service';
-import profile from '../assets/dummy.svg'
+import profile from '../assets/image/dummy.svg'
 import HeaderTop from '../layout/header';
 import ItemCard from '../components/itemCard';
 import { services, services_w } from '../data'

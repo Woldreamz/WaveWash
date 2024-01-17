@@ -1,0 +1,9 @@
+.profile-drawer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 3%;
+    padding-top: 30%;
+    background: white;
+    border-radius: 23px;
+}

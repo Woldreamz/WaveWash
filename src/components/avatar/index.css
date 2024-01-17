@@ -1,0 +1,38 @@
+.avatar-back-drop {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background: url('../../assets/image/extraprofile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    top: 2rem;
+    z-index: 1;
+}
+
+.name-tab {
+    position: absolute;
+    top: 7rem;
+    left: -2rem;
+    width: 13rem;
+    align-content: center;
+    gap: 2%;
+}
+
+.profile-cricles {
+    position: absolute;
+    top: 6.6rem;
+    height: 2rem;
+    width: 2rem;
+    right: 10rem;
+}
+
+.text-large {
+    font-size: 1.5rem;
+}

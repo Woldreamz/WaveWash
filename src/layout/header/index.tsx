@@ -1,6 +1,6 @@
 import { IonHeader, IonImg } from '@ionic/react'
 import React from 'react'
-import header from '../../assets/wsh_serv.svg'
+import header from '../../assets/image/wsh_serv.svg'
 
 const HeaderTop = () => {
   return (
@@ -10,4 +10,4 @@ const HeaderTop = () => {
   )
 }
 
-export default HeaderTop
+export default HeaderTop 
