@@ -1,4 +1,4 @@
-import { IonAvatar, IonImg, IonItem, IonText, IonIcon, IonRow, IonCol } from '@ionic/react';
+import { IonAvatar, IonImg, IonItem, IonText, IonIcon, IonRow, IonCol, IonButton } from '@ionic/react';
 import React from 'react';
 import styled from '../../assets/icon/styled-right-arrow.svg'
 import camera from '../../assets/icon/camera.svg'
@@ -9,6 +9,7 @@ interface Props {
     profile: any
     reset: boolean
     customer_id: string
+    link: string
 }
  
 
@@ -22,7 +23,7 @@ const Avatar: React.FC<Props> = (props: Props) => {
             {props.reset?
                 <IonRow className='name-tab'>
                     <IonText className='text-large' color={'primary'}>{props.full_name}</IonText>
-                    <IonIcon icon={styled}  style={{height: '1.3rem', marginTop: '3px'}}/>
+                    <IonButton size='small' fill='clear' routerLink={props.link}><IonIcon icon={styled}  style={{height: '1.3rem', marginTop: '3px'}}/></IonButton>
                 </IonRow>
                 :
                 <>

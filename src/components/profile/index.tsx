@@ -20,15 +20,15 @@ const Profile: React.FC<Props> = (props: Props) => {
     return (
         <>
         <IonIcon src={coupon} style={{height: '2rem', width: '2rem', position: 'relative', top: '4rem'}} />
-        <Avatar profile={dummy} full_name='Philip Mathias' reset customer_id='HJVVD24' /> 
+        <Avatar profile={dummy} full_name='Philip Mathias' reset customer_id='HJVVD24' link='/profileupdate' /> 
         <div className='profile-drawer'> 
             <IonCol> 
                 <TabAcross icon={history} text='Order History' />
                 <TabAcross icon={noti} text='Noifications' />
-                <TabAcross icon={call} text='Change Password' />
+                <TabAcross icon={call} text='Change Password' link='/changepassword'/>
                 <TabAcross icon={promo} text='Promotion' />
             </IonCol>
-            <IonButton style={{marginBottom: '28rem'}} >LOG OUT</IonButton>
+            <IonButton style={{marginBottom: '28rem', marginTop: "20rem"}} >LOG OUT</IonButton>
         </div>
         </>
     );

@@ -20,7 +20,7 @@ const Walkthrough: React.FC<ContainerProps> = () => {
         >Have an account? 
         </span>
         <span>
-          <Link to="/LoginPage" style={{color: '#006A55', fontSize: 16, fontFamily: 'Inter', fontWeight: '500', textDecoration: "none"}}>
+          <Link to="/login" style={{color: '#006A55', fontSize: 16, fontFamily: 'Inter', fontWeight: '500', textDecoration: "none"}}>
           Log in</Link>
         </span>
 

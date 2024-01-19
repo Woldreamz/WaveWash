@@ -32,6 +32,9 @@ import ServicePage from './pages/Services';
 import CartPage from './pages/Cart';
 import TrackPage from './pages/Track';
 import ProfilePage from './pages/Profile';
+import ChangePassword from './pages/ChangePassword';
+import ProfileUpdate from './pages/ProfileUpdate';
+import Tabs from './pages/Tabs';
 
 setupIonicReact();
 
@@ -75,6 +78,13 @@ const App: React.FC = () => (
         <Route exact path="/profile">
           <ProfilePage />
         </Route>
+        <Route exact path="/changepassword">
+          <ChangePassword />
+        </Route>
+        <Route exact path="/profileupdate">
+          <ProfileUpdate/>
+        </Route>
+        <Route exact path="/tabs" component={Tabs}/>
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>

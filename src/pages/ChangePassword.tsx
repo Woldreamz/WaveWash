@@ -5,7 +5,7 @@ import Button from '../components/Button';
 import Paragraph from '../components/Paragraph';
 
 
-const LoginPage: React.FC = () => {
+const ChangePassword: React.FC = () => {
     return (
       <IonPage>
         <IonHeader>
@@ -13,30 +13,37 @@ const LoginPage: React.FC = () => {
          <IonButtons slot="start">
             <IonBackButton></IonBackButton>
           </IonButtons>
-            <IonTitle>Log in</IonTitle>
+
         </IonToolbar>
       </IonHeader>
   
         <IonContent class='ion-padding-top' className='ion-padding-start'>
           
           <form action="/" method='post'>
-            <Paragraph headertext='Welcome' text='Sign in via your email address'/>
+            <Paragraph headertext='Change Password' text=''/>
 
             <Input 
-              type="email"
-              placeholder="Email" 
+              type="password"
+              placeholder="Current Password" 
+              name='Current Password'
+              value=''
             />
 
             <Input 
               type="password"
-              placeholder="Password" 
+              placeholder="New Password"
+              name='New Password'
+              value=''
             />
 
-           <p><Link to="changepassword" style={{ color: '#006A55', padding: "15px", fontFamily: 'Inter', textDecoration: 'none'}}>Forgot password?</Link></p>
-           <p><Link to="/loginPhone" style={{ color: '#006A55', padding: "15px", textDecoration: 'none', fontFamily: 'Inter'}}>
-            Click here to use mobile number, instead</Link></p>
+            <Input 
+              type="password"
+              placeholder="Confirm New Password"
+              name='New Password'
+              value='' 
+            />
 
-            <Button buttonName='Log In' />
+            <Button buttonName='Change' />
 
           </form>
           
@@ -45,4 +52,4 @@ const LoginPage: React.FC = () => {
     );
   };
   
-  export default LoginPage;
+  export default ChangePassword;

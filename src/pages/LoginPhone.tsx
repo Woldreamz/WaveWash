@@ -27,7 +27,7 @@ const LoginPhone: React.FC = () => {
               placeholder="Mobile Number" 
             />
         
-           <p><Link to="/LoginPage" style={{ color: '#006A55', padding: "15px", textDecoration: 'none', fontFamily: 'Inter'}}>
+           <p><Link to="/login" style={{ color: '#006A55', padding: "15px", textDecoration: 'none', fontFamily: 'Inter'}}>
             Click here to use email, instead</Link></p>
            
            <Button buttonName='Log In' />
