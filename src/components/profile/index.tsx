@@ -1,5 +1,5 @@
-import { IonButton, IonCol, IonIcon } from '@ionic/react';
-import React from 'react';
+import { IonButton, IonCol, IonIcon, IonActionSheet } from '@ionic/react';
+import React, { useState} from 'react';
 import TabAcross from '../profile_tab';
 import history from '../../assets/icon/history.svg'
 import noti from '../../assets/icon/noti.svg'
@@ -16,7 +16,7 @@ interface Props {
 }
 
 const Profile: React.FC<Props> = (props: Props) => {
-
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <>
         <IonIcon src={coupon} style={{height: '2rem', width: '2rem', position: 'relative', top: '4rem'}} />
@@ -28,7 +28,34 @@ const Profile: React.FC<Props> = (props: Props) => {
                 <TabAcross icon={call} text='Change Password' link='/changepassword'/>
                 <TabAcross icon={promo} text='Promotion' />
             </IonCol>
-            <IonButton style={{marginBottom: '28rem', marginTop: "20rem"}} >LOG OUT</IonButton>
+            <IonButton style={{marginBottom: '28rem', marginTop: "20rem"}} onClick={() => setIsOpen(true)}>LOG OUT</IonButton>
+            <IonActionSheet
+                isOpen={isOpen}
+                header="Actions"
+                buttons={[
+                // {
+                //     text: 'Delete',
+                //     role: 'destructive',
+                //     data: {
+                //     action: 'delete',
+                //     },
+                // },
+                {
+                    text: 'Logout',
+                    data: {
+                    action: 'logout',
+                    },
+                },
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    data: {
+                    action: 'cancel',
+                    },
+                },
+                ]}
+                onDidDismiss={() => setIsOpen(false)}
+            ></IonActionSheet>
         </div>
         </>
     );

@@ -18,7 +18,7 @@ const ProfileUpdate: React.FC = () => {
       </IonHeader>
 
       <div style={{paddingBottom: "40px", backgroundColor: "#2491CB0D", width:'100%'}}>
-            <Avatar profile={dummy} full_name='Philip Mathias' reset customer_id='HJVVD24' link='' />
+            <Avatar profile={dummy} full_name='Philip Mathias' reset={false} customer_id='HJVVD24' link='' />
        </div>
   
         <IonContent class='ion-padding-top' className="ion-padding-start"> 

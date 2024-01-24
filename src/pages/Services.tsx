@@ -34,6 +34,7 @@ const ServicePage: React.FC = () => {
                     Proceed to Cart
                     </IonButton>
                     <RiderModal full_name='Rainer Nsa' time={6} deliveries={400} />
+                    <Tabs />
                 </IonRow>
                 
                 
