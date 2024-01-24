@@ -77,3 +77,10 @@ ion-button.paymentBtn2 {
   --border-color: #034924;
 }
 
+ion-segment-button {
+  --indicator-color: #006A55;
+  --color: #000;
+  --color-checked: #fff;
+
+}
+

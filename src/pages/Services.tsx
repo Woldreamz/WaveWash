@@ -6,7 +6,6 @@ import HeaderTop from '../layout/header';
 import ItemCard from '../components/itemCard';
 import { services, services_w } from '../data'
 import RiderModal from '../components/modals/rider_details';
-import Tabs from './Tabs';
 
 
 
@@ -38,6 +37,7 @@ const ServicePage: React.FC = () => {
                 
                 
             </IonContent>
+        
 
         </IonPage>
 
