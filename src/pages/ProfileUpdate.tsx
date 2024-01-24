@@ -9,13 +9,13 @@ const ProfileUpdate: React.FC = () => {
     return (
       <IonPage>
         <IonHeader>
-        <IonToolbar mode="ios">
-         <IonButtons slot="start">
-            <IonBackButton></IonBackButton>
-          </IonButtons>
+         <IonToolbar mode="ios">
+           <IonButtons slot="start">
+             <IonBackButton></IonBackButton>
+           </IonButtons>
             <IonTitle>Profile</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+         </IonToolbar>
+       </IonHeader>
 
       <div style={{paddingBottom: "40px", backgroundColor: "#2491CB0D", width:'100%'}}>
             <Avatar profile={dummy} full_name='Philip Mathias' reset={false} customer_id='HJVVD24' link='' />

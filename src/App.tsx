@@ -57,17 +57,11 @@ const App: React.FC = () => (
         <Route exact path="/signup">
           <Signup />
         </Route>
-        <Route exact path="/homepage">
-          <HomePage />
-        </Route>
         <Route exact path="/phoneauth">
           <PhoneAuth />
         </Route>
         <Route exact path="/payment">
           <Payment />
-        </Route>
-        <Route exact path="/services">
-          <ServicePage />
         </Route>
         <Route exact path="/cart">
           <CartPage />
@@ -75,16 +69,13 @@ const App: React.FC = () => (
         <Route exact path="/track">
           <TrackPage />
         </Route>
-        <Route exact path="/profile">
-          <ProfilePage />
-        </Route>
         <Route exact path="/changepassword">
           <ChangePassword />
         </Route>
         <Route exact path="/profileupdate">
           <ProfileUpdate/>
         </Route>
-        <Route exact path="/tabs" component={Tabs}/>
+        <Route path="/tabs" component={Tabs}/>
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>

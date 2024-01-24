@@ -24,7 +24,7 @@ const Profile: React.FC<Props> = (props: Props) => {
         <div className='profile-drawer'> 
             <IonCol> 
                 <TabAcross icon={history} text='Order History' />
-                <TabAcross icon={noti} text='Noifications' />
+                <TabAcross icon={noti} text='Noifications' link='/tabs/notifications' />
                 <TabAcross icon={call} text='Change Password' link='/changepassword'/>
                 <TabAcross icon={promo} text='Promotion' />
             </IonCol>

@@ -4,7 +4,6 @@ import MyCart from '../layout/nav/my_cart';
 import ItemCart from '../components/itemCart';
 import { services, services_w } from '../data'
 import CartModal from '../components/modals/cart_total';
-import Tabs from './Tabs';
 
 
 const CartPage: React.FC = () => {
@@ -38,7 +37,6 @@ const CartPage: React.FC = () => {
                     Checkout?
                 </IonButton> 
                 <CartModal subTotal={7500} deliveryFee={2500} discount={500} total={9500} />
-                <Tabs />
             </IonContent>
         </IonPage>
     );
