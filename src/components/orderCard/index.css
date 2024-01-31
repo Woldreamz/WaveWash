@@ -1,0 +1,18 @@
+
+
+
+.order-card {
+    box-shadow: 0 7px 14px #efefef;
+    padding: 3%;
+    border-radius: 5px;
+}
+
+.order-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+}
+
+.text-align {
+    text-align: right;
+}

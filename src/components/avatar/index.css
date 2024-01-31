@@ -36,3 +36,9 @@
 .text-large {
     font-size: 1.5rem;
 }
+
+.shadow-bg {
+    box-shadow: 0 7px 14px #efefef;
+    display: flex;
+    gap: 2%;
+}

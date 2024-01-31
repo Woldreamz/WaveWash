@@ -1,7 +1,9 @@
 export function addComma(number: number){
     let str = number.toString()
-    if(str.length > 4){
-        str = `${str.slice(0, 0)},${str.slice(1, 3)}`
+    if(str.length === 4){
+        str = `${str.slice(0, 1)},${str.slice(1, 4)}`
+    }else if(str.length === 5){
+        str = `${str.slice(0, 1)},${str.slice(2, 4)}`
     }
     return str
 }

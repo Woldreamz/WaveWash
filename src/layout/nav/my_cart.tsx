@@ -15,7 +15,7 @@ const MyCart: React.FC<UserProps> = ({name, hide}: UserProps) => {
             <IonButtons slot='start'>
                 <IonBackButton defaultHref='' text={''}></IonBackButton>
             </IonButtons>
-            <IonTitle>{name}</IonTitle>
+            <IonTitle color={'primary'}>{name}</IonTitle>
             {!hide? <IonIcon icon={filter} size='large' style={{width:'30px'}} slot='end' />: <></>}
         </IonToolbar>
     </IonHeader>
