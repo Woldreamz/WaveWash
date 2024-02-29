@@ -1,56 +1,71 @@
-import { createContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
-
-interface ContextData {
-    children: any
-    title: string 
-    amount: number
+interface ItemData {
+    pcs: number 
+    price: number
 }
-const CartDataContext = createContext({});
 
-const CartDataProvider = ({ children }: any) => {
+type CartData = {
+    shirts: ItemData;
+    pants: ItemData;
+    beddings: ItemData;
+    shoes: ItemData;
+    total: number
+}
+export interface ItemInfo {
+    title: string 
+    qty: number
+}
+export type CartContext = {
+    addToCart: CartData;
+    addItem: ({title, qty}: ItemInfo) => void;
+}    
+
+const CartDataContext = createContext<CartContext | null>(null);
+
+const CartDataProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
    const shirtInitial = 1000
    const pantInitial = 1000
    const beddingInitial = 2500
    const shoeInitial = 1500
-  const [addToCart, setAddToCart] = useState({
+  const [addToCart, setAddToCart] = useState<CartData>({
     shirts:{ 
         pcs: 0,
-        price: 1000
+        price: 0
     },
     pants: {
         pcs: 0,
-        price: 1000
+        price: 0
     },
     beddings: {
         pcs: 0,
-        price: 2500
+        price: 0
     },
     shoes: {
         pcs: 0,
-        price: 1500
+        price: 0
     },
     total: 0
   });
 
-  const addItem = ({title, amount}: ContextData) => {
+  const addItem = ({title, qty}: ItemInfo) => {
     let final;
     switch (title){
         case 'Shirts':
-            final = amount * shirtInitial
+            final = qty * shirtInitial
             break;
         case 'Pants':
-            final = amount * pantInitial
+            final = qty * pantInitial
             break;
         case 'Beddings':
-            final = amount * beddingInitial
+            final = qty * beddingInitial
             break;
         case 'Shoes':
-            final = amount * shoeInitial
+            final = qty * shoeInitial
             break;
     }
     setAddToCart({...addToCart, [title]: {
-                                            pcs: amount,
+                                            pcs: qty,
                                             price: final
                                         }});
   };

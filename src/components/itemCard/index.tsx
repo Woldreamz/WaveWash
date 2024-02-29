@@ -1,7 +1,8 @@
 import { IonContent, IonImg, IonItem, IonList, IonRow, IonText } from '@ionic/react'
-import React from 'react'
+import React, { useContext } from 'react'
 import Counter from '../counter'
 import './index.css'
+
 
 interface ItemProp{
     img: any
@@ -15,7 +16,7 @@ const ItemCard = ({img, title, price}: ItemProp) => {
         <img src={img} alt={title} />
         <IonRow className='space-around'>
             <IonText className='text-weight'>N{price}</IonText>
-            <Counter />
+            <Counter title={title}/>
         </IonRow>
     </div>
   )
