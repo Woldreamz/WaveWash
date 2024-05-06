@@ -32,7 +32,7 @@ const ItemCart: React.FC<ItemProp> = ({img, title, pcs, price, modal}: ItemProp)
                             <IonText className='text-weight thick-text'>N{price}</IonText>
                         </IonCol>
                         <IonCol size='4.5' style={{padding: 0}}>
-                            <FillCounter />
+                            <FillCounter total={pcs} />
                         </IonCol>
                     </IonRow>
                 </div>

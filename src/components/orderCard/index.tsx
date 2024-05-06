@@ -1,4 +1,4 @@
-import { IonButton, IonCol, IonContent, IonImg, IonItem, IonList, IonRow, IonText } from '@ionic/react'
+import { IonButton, IonCol, IonContent, IonImg, IonItem, IonList, IonRow, IonText, useIonRouter } from '@ionic/react'
 import React from 'react'
 import './index.css'
 
@@ -14,8 +14,14 @@ interface ItemProp{
 }
 
 const OrderCard = ({orderId, orderDate, pickUp, total, pick, cancel, confirm, key_id}: ItemProp) => {
+
+  const navigation = useIonRouter()
+  const details = () => {
+    navigation.push("/orderdetail", "root", "replace")
+  }
+
   return (
-    <div className='order-card' key={key_id}>
+    <div className='order-card' key={key_id} onClick={details}>
         <IonRow>
            <IonCol className='order-column'>
             <IonText style={{ color: '#c3bfbf' }}>Order ID:</IonText>
@@ -32,7 +38,7 @@ const OrderCard = ({orderId, orderDate, pickUp, total, pick, cancel, confirm, ke
         </IonRow>
         <IonRow style={{ display: 'grid'}}>
             {pick && <IonButton fill='clear' style={{ backgroundColor: 'rgb(228 243 240)', color: '#006A55', borderRadius: '10px', marginTop: '2rem', justifySelf: 'start'}}>Pick Up</IonButton>}
-            {confirm && <IonButton color={'primary'} style={{ borderRadius: '10px', marginTop: '2rem', justifySelf: 'start'}}>Confirmed</IonButton>}
+            {confirm && <IonButton color={'primary'} style={{ borderRadius: '10px', marginTop: '2rem', justifySelf: 'start'}}>Confirm</IonButton>}
             {cancel && <IonButton fill='clear' style={{ backgroundColor: '#f3677f', color: 'white', borderRadius: '10px', marginTop: '2rem', justifySelf: 'end'}}>Cancel</IonButton>}
         </IonRow>
     </div>

@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonBackButton, IonButtons } from '@ionic/react';
 import { services, services_w } from '../data'
 import Order from '../components/order';
 
@@ -6,16 +6,19 @@ const TrackPage: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+        <IonToolbar color={'primary-contrast'}>
+          <IonButtons slot='start'>
+              <IonBackButton defaultHref='' text={''}></IonBackButton>
+          </IonButtons>
+          <IonTitle>Track Order</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
+        {/* <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
-        </IonHeader>
+        </IonHeader> */}
         <Order orderNumber={2} total={9500} 
               slot1={services_w[0].image}
               slot2={services_w[1].image}

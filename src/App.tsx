@@ -23,7 +23,7 @@ import './theme/variables.css';
 
 /* Pages */
 import Home from './pages/Home';
-import LoginPage from './pages/LoginPage';
+import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import FirstPage from './pages/FirstPage';
 import LoginPhone from './pages/LoginPhone';
@@ -36,62 +36,72 @@ import TrackPage from './pages/Track';
 import ProfilePage from './pages/Profile';
 import ChangePassword from './pages/ChangePassword';
 import ProfileUpdate from './pages/ProfileUpdate';
+import NotificationPage from './pages/Notifications';
 import Tabs from './pages/Tabs';
 import History from './pages/OrderHistory';
 import OrderDetailsPage from './pages/Details';
+import { AuthDataProvider } from './context/authContext'
+import { CartDataProvider } from './context/cartContext';
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home /> 
-        </Route>
-        <Route exact path="/history">
-          <History /> 
-        </Route>
-        <Route exact path="/orderdetail">
-          <OrderDetailsPage /> 
-        </Route>
-        <Route exact path="/FirstPage">
-          <FirstPage />
-        </Route>
-        <Route exact path="/login">
-          <LoginPage />
-        </Route>
-        <Route exact path="/loginphone">
-          <LoginPhone />
-        </Route>
-        <Route exact path="/signup">
-          <Signup />
-        </Route>
-        <Route exact path="/phoneauth">
-          <PhoneAuth />
-        </Route>
-        <Route exact path="/payment">
-          <Payment />
-        </Route>
-        <Route exact path="/cart">
-          <CartPage />
-        </Route>
-        <Route exact path="/track">
-          <TrackPage />
-        </Route>
-        <Route exact path="/changepassword">
-          <ChangePassword />
-        </Route>
-        <Route exact path="/profileupdate">
-          <ProfileUpdate/>
-        </Route>
-        <Route path="/tabs" component={Tabs}/>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+  <AuthDataProvider>
+    <CartDataProvider>
+    <IonApp>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route path="/home" exact={true}>
+            <Home /> 
+          </Route>
+          <Route path="/orderdetail" exact={true}>
+            <OrderDetailsPage /> 
+          </Route>
+          <Route path="/start" exact={true}>
+            <FirstPage />
+          </Route>
+          <Route path="/signin" exact={true}>
+            <Signin />
+          </Route>
+          <Route path="/loginphone" exact={true}>
+            <LoginPhone />
+          </Route>
+          <Route path="/signup" exact={true}>
+            <Signup />
+          </Route>
+          <Route path="/phoneauth" exact={true}>
+            <PhoneAuth />
+          </Route>
+          <Route path="/payment" exact={true}>
+            <Payment />
+          </Route>
+          {/* <Route path="/services" exact>
+            <ServicePage />
+          </Route> */}
+          {/* <Route path="/cart" exact={true}>
+            <CartPage />
+          </Route> */}
+          <Route path="/track" exact={true}>
+            <TrackPage />
+          </Route>
+          {/* <Route path="/notifications" exact>
+            <NotificationPage />
+          </Route> */}
+          <Route path="/changepassword" exact={true}>
+            <ChangePassword />
+          </Route>
+          <Route path="/profileupdate" exact={true}>
+            <ProfileUpdate/>
+          </Route>
+          <Route path="/tabs" component={Tabs}/>
+          <Route path="/" exact={true}>
+            <Redirect to="/home" />
+          </Route>
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
+    </CartDataProvider>
+  </AuthDataProvider>
 );
 
 export default App;

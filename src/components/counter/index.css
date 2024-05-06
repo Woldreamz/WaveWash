@@ -1,11 +1,10 @@
 .ion-border {
     border-radius: 27px;
     display: flex;
-    flex-wrap: wrap;
     height: 22px;
     border: 1px solid black;
-    width: 40%;
-    align-content: center;
+    width: max-content;
+    align-items: center;
     font-weight: 700;
     font-size: 0.7rem;
 }

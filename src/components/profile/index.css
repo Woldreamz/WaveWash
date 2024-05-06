@@ -7,3 +7,41 @@
     background: white;
     border-radius: 23px;
 }
+
+.action-sheet-wrapper {
+    width: 83%;
+    margin-bottom: 3rem;
+}
+
+.action-sheet-container {
+    margin: auto;
+    width: 83%;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+
+.action-sheet-group {
+    border-radius: 10px;
+}
+
+.action-sheet-title.sc-ion-action-sheet-md {
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+
+.action-sheet-title.sc-ion-action-sheet-ios {
+    text-align: center;    
+    border-bottom: 1px solid grey;
+}
+
+.action-sheet-button.sc-ion-action-sheet-md {
+    display: grid;
+    justify-content: center;
+    color: #007AFF;
+}
+
+.action-sheet-button.sc-ion-action-sheet-ios {
+    display: grid;
+    justify-content: center;
+    color: #007AFF;
+}

@@ -10,7 +10,7 @@ import item from '../assets/image/item.svg'
 
 const services = [
     {
-        'title': 'Shirt',
+        'title': 'Shirts',
         'image': shirt,
         'price': 1000,
         'pcs': 4
@@ -22,7 +22,7 @@ const services = [
         'pcs': 5
     },
     {
-        'title': 'Bedding',
+        'title': 'Beddings',
         'image': bedding,
         'price': 2500,
         'pcs': 1
@@ -39,7 +39,7 @@ export {services};
 
 const services_w = [
     {
-        'title': 'Shirt',
+        'title': 'Shirts',
         'image': shirt_w,
         'price': 1000,
         'pcs': 4
@@ -51,7 +51,7 @@ const services_w = [
         'pcs': 2
     },
     {
-        'title': 'Bedding',
+        'title': 'Beddings',
         'image': bedding_w,
         'price': 2500,
         'pcs': 1

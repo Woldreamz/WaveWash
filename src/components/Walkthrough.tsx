@@ -12,7 +12,7 @@ const Walkthrough: React.FC<ContainerProps> = () => {
       <h1 style={{width: "100%", textAlign: 'center', color: '#090A0A', fontSize: 24, fontFamily: 'Inter', fontWeight: '700', padding: "20px"}}
       >We are here for you!</h1>
 
-      <IonButton className="Btn" size="large" shape="round" routerLink="/Signup">Create Account</IonButton>
+      <IonButton className="Btn" size="large" shape="round" routerLink="/signup">Create Account</IonButton>
 
       <div>
         <span 
@@ -20,7 +20,7 @@ const Walkthrough: React.FC<ContainerProps> = () => {
         >Have an account? 
         </span>
         <span>
-          <Link to="/login" style={{color: '#006A55', fontSize: 16, fontFamily: 'Inter', fontWeight: '500', textDecoration: "none"}}>
+          <Link to="/signin" style={{color: '#006A55', fontSize: 16, fontFamily: 'Inter', fontWeight: '500', textDecoration: "none"}}>
           Log in</Link>
         </span>
 

@@ -8,11 +8,13 @@ const History: React.FC = () => {
   return (
     <IonPage>
         <HistoryNav name='ORDER HISTORY'/>
-    <OrderSegment 
-          data1={orders}
-          data2={orders}
-          data3={orders}
-    />
+      <IonContent className='ion-padding'>
+        <OrderSegment 
+              data1={orders}
+              data2={orders}
+              data3={orders}
+        />
+      </IonContent>
     </IonPage>
   );
 };

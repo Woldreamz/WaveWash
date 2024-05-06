@@ -1,5 +1,6 @@
 .nav-blank {
     --border: none;
+    --border-style: none;
     --border-width: none;
     --background: transparent;
     --padding-start: 27px;
@@ -8,4 +9,9 @@
 
 .header-ios ion-toolbar:last-of-type {
     --border-width: 0 0 0;
+}
+
+.small-size {
+    height: 40px;
+    width: 40px;
 }

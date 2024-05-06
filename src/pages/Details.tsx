@@ -7,6 +7,7 @@ import rider from "../assets/image/dummy2.svg"
 import { detail } from '../data';
 import { addComma } from '../utils';
 import MyCart from '../layout/nav/my_cart';
+import DetailsNav from '../layout/nav/detailsnav';
 
 const OrderDetailsPage: React.FC = () => {
     let subTotal=0
@@ -18,7 +19,7 @@ const OrderDetailsPage: React.FC = () => {
     let total = 1000 + subTotal
     return (
         <IonPage>
-            <MyCart name='ORDER DETAILS' hide={true} />
+            <DetailsNav name='ORDER DETAILS' />
             <IonContent className="ion-padding">
                 <DetailCard 
                     action='Confirmed'

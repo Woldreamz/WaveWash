@@ -84,3 +84,14 @@ ion-segment-button {
 
 }
 
+.profile-update {
+  background: url("../assets/image/clouds.svg");
+  background-size: contain;
+  margin-bottom: 9rem;
+  width: 100%;
+}
+
+.header-md {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}

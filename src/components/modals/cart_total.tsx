@@ -1,5 +1,6 @@
-import { IonButton, IonCol, IonContent, IonHeader, IonInput, IonModal, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react';
-import React, {useRef, useState} from 'react';
+import { IonButton, IonCol, IonContent, IonHeader, IonInput, IonModal, IonPage, IonRow, IonText, IonTitle, IonToolbar, useIonRouter } from '@ionic/react';
+import React, {useRef, useState, useContext} from 'react';
+import { CartContext, CartDataContext } from '../../context/cartContext'
 import './index.css'
 
 interface Receipt{
@@ -11,18 +12,21 @@ interface Receipt{
 
 
 const CartModal: React.FC<Receipt> = ({subTotal, deliveryFee, discount, total}) => {
+    const { addItem } = useContext(CartDataContext) as CartContext;
     const [checkOut, setCheckOut] = useState<any>(null);
     const modal = useRef<HTMLIonModalElement>(null);
+    const navigate = useIonRouter()
 
     function checkout(){
         setCheckOut(1);
         modal.current?.dismiss();
+        navigate.push("/tabs/services/cart", "root")
     }
 
     return (
-        <IonModal breakpoints={[0, 0.42]} initialBreakpoint={0.42} ref={modal} trigger='checkout-modal'>
+        <IonModal breakpoints={[0, 0.45]} initialBreakpoint={0.45} ref={modal} trigger='checkout-modal'>
             <IonHeader style={{padding: '5%'}}>
-                <IonInput type='text' placeholder='Promo Code' fill='outline' shape='round' style={{'--padding-start': '3%'}}>
+                <IonInput type='text' placeholder='Promo Code' fill='outline' shape='round' style={{'--padding-end': '16px'}}>
                     <IonButton slot='end' shape='round'>
                         Apply
                     </IonButton>
@@ -62,7 +66,7 @@ const CartModal: React.FC<Receipt> = ({subTotal, deliveryFee, discount, total}) 
                         <IonText>{total}</IonText>
                     </IonCol>
                 </IonRow>
-                <IonButton shape='round' onClick={checkout}>
+                <IonButton shape='round' onClick={checkout} style={{width: '64%'}} >
                     Proceed to Checkout
                 </IonButton>
                 </IonCol>

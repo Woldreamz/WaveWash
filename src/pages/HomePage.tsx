@@ -1,6 +1,10 @@
 import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, useIonRouter } from '@ionic/react';
 import './Home.css';
-import MyCart from '../layout/nav/my_cart';
+import profile from '../assets/image/dummy.svg'
+import DiscountBanner from '../components/banner/discount';
+import HowTo from '../layout/banner';
+import OptionBanner from '../components/option/options';
+import UserNav from '../layout/nav/user';
 
 
 const HomePage: React.FC = () => {
@@ -11,9 +15,11 @@ const HomePage: React.FC = () => {
   }
   return (
     <IonPage>
-      <MyCart name='Track Order' hide={true}/>
-      <IonContent>
-       
+      <UserNav name='Rainer Nsa' profile={profile} />
+      <IonContent className="ion-padding-top">
+        <OptionBanner />
+        <DiscountBanner discount={20} code='WERTY' />
+        <HowTo />
       </IonContent> 
     
     </IonPage>

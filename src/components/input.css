@@ -1,0 +1,29 @@
+.floating {
+    position: absolute;
+    background: white;
+    padding: 1%;
+    left: 2.5rem;
+    font-size: 18px;
+    margin-top: 1px;
+    z-index: 3;
+}
+
+.floatings {
+    position: absolute;
+    background: white;
+    padding: 1%;
+    left: 14rem;
+    font-size: 18px;
+    margin-top: 1px;
+    z-index: 3;
+}
+
+.input-fill-solid.sc-ion-input-md-h {
+    --background: white;
+    --border: 1px solid grey;
+}
+
+.input-fill-solid.has-focus.sc-ion-input-md-h{
+    --background: white;
+    --border: 1px solid grey;
+}

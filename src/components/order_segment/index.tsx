@@ -25,21 +25,30 @@ const  OrderSegment:React.FC<ItemProp> =  ({data1, data2, data3}: ItemProp) => {
       <IonSegment value={isActive} color={'white'} className='order-colors'>
         <IonSegmentButton 
         value="upcoming"
+        layout='icon-start'
+        className='ion-no-padding'
         onClick={() => setIsActive("upcoming")}
         >
-          <IonLabel><IonIcon icon={isActive ==="upcoming"? gburger:burger} style={{ marginRight: '10px' }}></IonIcon>Upcoming</IonLabel>
+          <IonIcon icon={isActive ==="upcoming"? gburger:burger} style={{ height: '13px', width: '13px', marginRight: '0px' }}></IonIcon>
+          <IonLabel style={{ textTransform: 'none', maxWidth: 'max-content', fontWeight: 700, fontSize: '12px' }}>Upcoming</IonLabel>
         </IonSegmentButton>
         <IonSegmentButton 
         value="completed"
+        layout='icon-start'
+        className='ion-no-padding'
         onClick={() => setIsActive("completed")}
         >
-          <IonLabel><IonIcon icon={isActive === "completed"? gtick:tick} style={{ marginRight: '10px' }}></IonIcon>Completed</IonLabel>
+          <IonIcon icon={isActive === "completed"? gtick:tick} style={{ height: '20px', width: '20px', marginRight: '0px' }}></IonIcon>
+          <IonLabel style={{ textTransform: 'none', maxWidth: 'max-content', fontWeight: 700, fontSize: '12px' }}>Completed</IonLabel>
         </IonSegmentButton>
         <IonSegmentButton 
         value="cancelled"
+        layout='icon-start'
+        className='ion-no-padding'
         onClick={() => setIsActive("cancelled")}
         >
-          <IonLabel><IonIcon icon={isActive === "cancelled"? gclose:close} style={{ marginRight: '10px' }}></IonIcon>Cancelled</IonLabel>
+          <IonIcon icon={isActive === "cancelled"? gclose:close} style={{ height: '20px', width: '20px', marginRight: '0px' }}></IonIcon>
+          <IonLabel style={{ textTransform: 'none', maxWidth: 'max-content', fontWeight: 700, fontSize: '12px' }}>Cancelled</IonLabel>
         </IonSegmentButton>
       </IonSegment>
       <IonContent>

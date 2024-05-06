@@ -1,0 +1,27 @@
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 6rem;
+    width: 30%;
+    background: #72A89E;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 5%;
+}
+
+/* .img {
+    height: 45px;
+    width: 45px;
+} */
+
+.option-banner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    width: 87%;
+    margin: auto;
+}

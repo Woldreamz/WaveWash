@@ -8,7 +8,7 @@ const Home: React.FC = () => {
 
       <IonContent className='Home' fullscreen>
         
-        <div  id="container1"><IonButton className='Homebtn' size="large" shape="round" routerLink="/FirstPage">Get Started</IonButton></div>
+        <div  id="container1"><IonButton className='Homebtn' size="large" shape="round" routerLink="/start">Get Started</IonButton></div>
 
       </IonContent>
 

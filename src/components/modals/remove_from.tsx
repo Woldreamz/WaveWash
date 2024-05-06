@@ -1,15 +1,24 @@
 import { IonButton, IonCol, IonContent, IonHeader, IonInput, IonModal, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react';
-import React, {useRef, useState} from 'react';
-import ItemCart, {ItemProp} from '../itemCart';
+import React, {useRef, useState, useContext} from 'react';
+import ItemCart from '../itemCart';
 import RemoveCart from '../itemCart/remove';
+import { CartContext, CartDataContext } from '../../context/cartContext'
 
-
+export interface ItemProp{
+    img: any
+    title: string
+    price: number
+    pcs: number
+    modal: string
+}
 
 const RemoveModal: React.FC<ItemProp> = ({title, pcs, price, img, modal}) => {
+    const { removeItem } = useContext(CartDataContext) as CartContext;
     const [checkOut, setCheckOut] = useState<any>(null);
     const remModal = useRef<HTMLIonModalElement>(null);
 
-    function checkout(){
+    function remove(){
+        removeItem({title: title.toLowerCase(), price: price, qty: pcs})
         setCheckOut(1);
         remModal.current?.dismiss();
     }
@@ -30,7 +39,7 @@ const RemoveModal: React.FC<ItemProp> = ({title, pcs, price, img, modal}) => {
                         </IonButton>
                     </IonCol>
                     <IonCol size='6'>
-                        <IonButton shape='round' style={{ width: '100%', minHeight: '3rem'}}>
+                        <IonButton shape='round' style={{ width: '100%', minHeight: '3rem' }} onClick={() => remove()}>
                             Yes, Remove
                         </IonButton>
                     </IonCol>

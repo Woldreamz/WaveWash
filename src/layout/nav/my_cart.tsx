@@ -7,13 +7,14 @@ import './index.css'
 interface UserProps {
     name: string
     hide: boolean
+    path: string
 }
-const MyCart: React.FC<UserProps> = ({name, hide}: UserProps) => {
+const MyCart: React.FC<UserProps> = ({name, hide, path}: UserProps) => {
   return (
     <IonHeader >
-        <IonToolbar className='nav-blank'>
+        <IonToolbar className='nav-blank' color={'primary-contrast'}>
             <IonButtons slot='start'>
-                <IonBackButton defaultHref='' text={''}></IonBackButton>
+                <IonBackButton defaultHref={path? path : '/tabs/services'} text={''}></IonBackButton>
             </IonButtons>
             <IonTitle color={'primary'}>{name}</IonTitle>
             {!hide? <IonIcon icon={filter} size='large' style={{width:'30px'}} slot='end' />: <></>}

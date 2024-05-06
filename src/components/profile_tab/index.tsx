@@ -2,6 +2,7 @@ import { IonContent, IonIcon, IonButton, IonPage, IonRow, IonText, IonTitle, Ion
 import React from 'react';
 import back from '../../assets/icon/arrow-right.svg'
 import './index.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,6 +15,7 @@ interface Props {
 const TabAcross: React.FC<Props> = (props: Props) => {
 
     return (
+        <Link to={props.link} style={{ textDecoration: 'none' }}>
         <IonRow className='tab-across'>
             <IonRow style={{width: '70%', justifyContent: 'space-between'}}>
             <IonIcon  icon={props.icon} style={{paddingLeft: '4%'}} />
@@ -21,6 +23,7 @@ const TabAcross: React.FC<Props> = (props: Props) => {
             </IonRow>
             <IonButton size='small' fill='clear' routerLink={props.link}><IonIcon  icon={back} /></IonButton>
         </IonRow>
+        </Link>
     );
 };
  

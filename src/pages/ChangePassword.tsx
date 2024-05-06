@@ -17,7 +17,7 @@ const ChangePassword: React.FC = () => {
         </IonToolbar>
       </IonHeader>
   
-        <IonContent class='ion-padding-top' className='ion-padding-start'>
+        <IonContent className='ion-padding'>
           
           <form action="/" method='post'>
             <Paragraph headertext='Change Password' text=''/>

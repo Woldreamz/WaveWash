@@ -8,15 +8,16 @@ interface ItemProp{
     img: any
     title: string
     price: number
+    qty: number
 }
 
-const ItemCard = ({img, title, price}: ItemProp) => {
+const ItemCard = ({img, title, price, qty}: ItemProp) => {
   return (
     <div className='item-card'>
         <img src={img} alt={title} />
         <IonRow className='space-around'>
             <IonText className='text-weight'>N{price}</IonText>
-            <Counter title={title}/>
+            <Counter title={title.toLowerCase()} price={price} qty={qty} />
         </IonRow>
     </div>
   )
