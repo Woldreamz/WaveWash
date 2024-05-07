@@ -21,7 +21,7 @@ const Payment: React.FC = () => {
         </IonToolbar>
       </IonHeader>
 
-      <IonContent className='ion-padding-start'>
+      <IonContent color="light" className='ion-padding-start'>
         <Paragraph headertext='Select Your Payment Method' 
         text='Your selected payment method will be choosen to pay the bill.'/>
         <>
