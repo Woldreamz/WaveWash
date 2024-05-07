@@ -95,3 +95,16 @@ ion-segment-button {
   box-shadow: none;
   -webkit-box-shadow: none;
 }
+
+ion-content.Signin {
+  background-color: #fff;
+}
+ion-content.Signup {
+  background-color: #fff;
+}
+ion-content.LoginPhone {
+  background-color: #fff
+}
+ion-content.PhoneAuth {
+  background-color: #fff
+}
