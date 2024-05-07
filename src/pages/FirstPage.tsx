@@ -6,7 +6,7 @@ const FirstPage: React.FC = () => {
     return (
       <IonPage>
   
-        <IonContent fullscreen>
+        <IonContent color="light" fullscreen>
           <Walkthrough />
         </IonContent>
       </IonPage>
